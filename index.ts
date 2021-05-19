@@ -48,9 +48,79 @@ function generatEqual(digitsNum: number) {
       }
     }
   }
+  //filter 1
+  if(digitsNum>4&&first>1&&first<=5){
+    arrayOfNum[0]-=1;
+    let rand = between(0,2)
+    arrayOfNum[(digitsNum-1)-rand]+=1;
+    console.log("first add1")
+    return arrayOfNum
+  }
+  //filter 2
+  if(digitsNum>4&&first>5){
+    arrayOfNum[0]-=2;
+    let rand = between(0,2)
+    arrayOfNum[(digitsNum-1)-rand]+=2;
+    console.log("first add2")
+    return arrayOfNum
+  }
+  //filter rate 1
+  if(digitsNum>5&&first>5){
+    arrayOfNum[0]-=3;
+    let rand1 = between(0,4)
+    let rand2=between(0,4)
+    arrayOfNum[(digitsNum-1)-rand1]+=2;
+    arrayOfNum[(digitsNum-1)-rand2]+=1;
+    console.log("first equal add2")
+    return arrayOfNum
+  }
+  //filter rate 2
+  if(digitsNum>5&&arrayOfNum[1]>5){
+    arrayOfNum[1]-=3;
+    let rand1 = between(0,4)
+    let rand2=between(0,4)
+    arrayOfNum[(digitsNum-1)-rand1]+=2;
+    arrayOfNum[(digitsNum-1)-rand2]+=1;
+    console.log("second equal add2")
+    return arrayOfNum
+  }
+  //filter 3
+  if (digitsNum>4&&first==1){
+    let second =arrayOfNum[1];
+    if(second>1&&second<=5){
+      arrayOfNum[1]-=1;
+      let rand = between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=1
+      console.log("second add1")
+      return arrayOfNum
+    }else if(digitsNum>4&&second>5){
+      arrayOfNum[1]-=2;
+      let rand =between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=2
+      console.log("second add2")
+      return arrayOfNum
+    }
+  } 
+  // filter 4 
+  if (digitsNum>5&&arrayOfNum[2]>=1){
+    let third =arrayOfNum[2];
+    if(third>1&&third<=5){
+      arrayOfNum[2]-=1;
+      let rand = between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=1
+      console.log("third add1")
+      return arrayOfNum
+    }else if(digitsNum>4&&third>5){
+      arrayOfNum[2]-=2;
+      let rand =between(0,2)
+      arrayOfNum[(digitsNum-1)-rand]+=2
+      console.log("third add2")
+      return arrayOfNum
+    }
+  }
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratEqual(generatEqual(between(4,9))), 500); */
+/* setInterval(() =>testOfGeneratEqual(generatEqual(between(5,9))), 500); */
 /* setInterval(() =>console.log(generatEqual(3)), 500); */
 
 // Write TypeScript code!
