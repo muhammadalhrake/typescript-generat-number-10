@@ -35,7 +35,7 @@ export function handel(arrayOfNum, digitsNum) {
   if (digitsNum == 4 || digitsNum == 5) {
     handlePos(arrayOfNum, digitsNum, 0, 2);
     console.log("I'm in hnndel 1");
-  } else if (digitsNum == 6 && digitsNum == 7) {
+  } else if (digitsNum == 6 || digitsNum == 7) {
     handlePos(arrayOfNum, digitsNum, 0, 2);
     handlePos(arrayOfNum, digitsNum, 1, 3);
     console.log("I'm in hnndel 2");
