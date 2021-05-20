@@ -8,18 +8,19 @@ function between(min: number, max: number) {
 function handlePos(arrayOfNum, digitsNum, getpos, setpos) {
   let myNumber = arrayOfNum[getpos];
   if (myNumber > 2 && myNumber < 5) {
+    console.log("I'm in hnndelpos 1");
     arrayOfNum[getpos] -= 1;
     let rand = between(0, setpos);
     arrayOfNum[digitsNum - 1 - rand] += 1;
-    console.log("I'm in hnndelpos 1");
   } else if (myNumber == 5 || myNumber == 6) {
+    console.log("I'm in hnndelpos 2");
     arrayOfNum[getpos] -= 2;
     let rand1 = between(0, setpos);
     let rand2 = between(0, setpos);
     arrayOfNum[digitsNum - 1 - rand1] += 1;
     arrayOfNum[digitsNum - 1 - rand2] += 1;
-    console.log("I'm in hnndelpos 2");
   } else if (myNumber > 6 && myNumber <= 9) {
+    console.log("I'm in hnndelpos 3");
     arrayOfNum[getpos] -= 3;
     let rand1 = between(0, setpos);
     let rand2 = between(0, setpos);
@@ -27,7 +28,6 @@ function handlePos(arrayOfNum, digitsNum, getpos, setpos) {
     arrayOfNum[digitsNum - 1 - rand1] += 1;
     arrayOfNum[digitsNum - 1 - rand2] += 1;
     arrayOfNum[digitsNum - 1 - rand3] += 1;
-    console.log("I'm in hnndelpos 3");
   }
   return arrayOfNum;
 }

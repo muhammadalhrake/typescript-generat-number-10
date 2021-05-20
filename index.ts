@@ -52,7 +52,7 @@ function generatEqual(digitsNum: number) {
   handel(arrayOfNum, digitsNum);
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratEqual(generatEqual(between(2,9))), 500); */
+/* setInterval(() =>testOfGeneratEqual(generatEqual(between(2,9))), 700); */
 /* setInterval(() =>console.log(generatEqual(3)), 500); */
 
 // Write TypeScript code!
