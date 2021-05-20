@@ -14,18 +14,18 @@ function handlePos(arrayOfNum, digitsNum, getpos, setpos) {
     arrayOfNum[digitsNum - 1 - rand] += 1;
   } else if (myNumber == 5 || myNumber == 6) {
     console.log("I'm in hnndelpos 2");
-    arrayOfNum[getpos] -= 2;
-    let rand1 = between(0, setpos);
-    let rand2 = between(0, setpos);
-    arrayOfNum[digitsNum - 1 - rand1] += 1;
-    arrayOfNum[digitsNum - 1 - rand2] += 1;
-  } else if (myNumber > 6 && myNumber <= 9) {
-    console.log("I'm in hnndelpos 3");
     arrayOfNum[getpos] -= 3;
     let rand1 = between(0, setpos);
     let rand2 = between(0, setpos);
+    arrayOfNum[digitsNum - 1 - rand1] += 2;
+    arrayOfNum[digitsNum - 1 - rand2] += 1;
+  } else if (myNumber > 6 && myNumber <= 9) {
+    console.log("I'm in hnndelpos 3");
+    arrayOfNum[getpos] -= 4;
+    let rand1 = between(0, setpos);
+    let rand2 = between(0, setpos);
     let rand3 = between(0, setpos);
-    arrayOfNum[digitsNum - 1 - rand1] += 1;
+    arrayOfNum[digitsNum - 1 - rand1] += 2;
     arrayOfNum[digitsNum - 1 - rand2] += 1;
     arrayOfNum[digitsNum - 1 - rand3] += 1;
   }
@@ -40,8 +40,8 @@ export function handel(arrayOfNum, digitsNum) {
     handlePos(arrayOfNum, digitsNum, 1, 3);
     console.log("I'm in hnndel 2");
   } else if (digitsNum == 8 || digitsNum == 9) {
-    handlePos(arrayOfNum, digitsNum, 0, 3);
-    handlePos(arrayOfNum, digitsNum, 1, 2);
+    handlePos(arrayOfNum, digitsNum, 0, 2);
+    handlePos(arrayOfNum, digitsNum, 1, 3);
     handlePos(arrayOfNum, digitsNum, 2, 3);
     console.log("I'm in hnndel 3");
   }
