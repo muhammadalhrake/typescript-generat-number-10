@@ -53,7 +53,7 @@ function shuffle(a) {
 function compareArrays(a: any[], b: any[]) {
   return a.reduce((acc, next, index) => acc && next === b[index], true);
 }
-function shuffle1(array) {
+/* function shuffle1(array) {
   let array1 = [...array];
   let currentIndex = array1.length,
     temporaryValue,
@@ -73,7 +73,7 @@ function shuffle1(array) {
 
   return array1;
 }
-
+ */
 //test of generatEqual function
 function testOfGeneratEqual(array: Array<number>) {
   let sum = 0;
