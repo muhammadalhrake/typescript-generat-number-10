@@ -7,9 +7,24 @@ import { handel } from './handel';
 function between(min: number, max: number) {
   return random.int(min, max);
 }
+/**
+ * Shuffles array in place.
+ * @param {Array} a items An array containing the items.
+ */
+function shuffle(a) {
+  let array = [...a];
+  let j, x, i;
+  for (i = array.length - 1; i > 1; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    x = array[i];
+    array[i] = array[j];
+    array[j] = x;
+  }
+  return array;
+}
 function shuffle1(array) {
-  let array1 = [...array]
-  var currentIndex = array1.length,
+  let array1 = [...array];
+  let currentIndex = array1.length,
     temporaryValue,
     randomIndex;
 
@@ -74,7 +89,7 @@ function generatEqual(digitsNum: number) {
   //handel(arrayOfNum, digitsNum);
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratEqual(generatEqual(between(2,9))), 700); */
+/* setInterval(() =>testOfGeneratEqual(generatEqual(between(2,9))), 500); */
 /* setInterval(() =>console.log(generatEqual(3)), 500); */
 
 // Write TypeScript code!
