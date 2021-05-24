@@ -43,7 +43,6 @@ function shuffle(a: any[]) {
       array[j] = x;
     }
     if (compareArrays(array, a)) {
-      console.log(array, a);
       return shuffle(array);
     } else {
       return array;
