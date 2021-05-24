@@ -1,6 +1,9 @@
 //imports
 import random from 'random';
-
+//helper function
+function compareArrays(a: any[], b: any[]) {
+  return a.reduce((acc, next, index) => acc && next === b[index], true);
+}
 function between(min: number, max: number) {
   return random.int(min, max);
 }
@@ -8,7 +11,7 @@ function between(min: number, max: number) {
  * Shuffles array in place.
  * @param {Array} a items An array containing the items.
  */
-function shuffle(a) {
+function shuffle(a: any[]) {
   let array = [...a];
   let j, x, i;
   if (array.length == 3) {
@@ -47,6 +50,23 @@ function shuffle(a) {
     }
   }
 }
-function compareArrays(a: any[], b: any[]) {
-  return a.reduce((acc, next, index) => acc && next === b[index], true);
+function ansGenerat(correctAns: number) {
+  let sCorrentAns = correctAns.toString();
+  let arr = sCorrentAns.split('').map(num => +num);
+  return shuffle(arr);
+}
+// main function
+function ansArray(ones: number, num: number) {
+  let first = ones * num;
+  let digits = first.toString().length;
+  let second = +ansGenerat(first).join('');
+  let third = between(
+    +new Array(digits).fill(1).join(''),
+    +new Array(digits).fill(9).join('')
+  );
+  let fourth = between(
+    +new Array(digits).fill(1).join(''),
+    +new Array(digits).fill(9).join('')
+  );
+  return [first, second, third, fourth];
 }
