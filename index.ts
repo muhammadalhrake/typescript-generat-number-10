@@ -20,11 +20,15 @@ function shuffle(a) {
     array[i] = array[j];
     array[j] = x;
   }
-  if (array == a) {
+  if (compareArrays(array, a)) {
+    console.log(array, a )
     return shuffle(array);
   } else {
     return array;
   }
+}
+function compareArrays(a: any[], b: any[]) {
+  return a.reduce((acc, next, index) => acc && next === b[index], true);
 }
 function shuffle1(array) {
   let array1 = [...array];
