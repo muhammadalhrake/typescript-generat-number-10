@@ -7,6 +7,26 @@ import { handel } from './handel';
 function between(min: number, max: number) {
   return random.int(min, max);
 }
+function shuffle1(array) {
+  var currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (1 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 //test of generatEqual function
 function testOfGeneratEqual(array: Array<number>) {
   let sum = 0;
@@ -48,6 +68,7 @@ function generatEqual(digitsNum: number) {
       }
     }
   }
+  
   //handling the array
   handel(arrayOfNum, digitsNum);
   return arrayOfNum;
