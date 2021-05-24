@@ -120,7 +120,7 @@ function generatEqual(digitsNum: number) {
   //handel(arrayOfNum, digitsNum);
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratEqual(generatEqual(between(3,3))), 500); */
+/* setInterval(() =>testOfGeneratEqual(generatEqual(between(3,9))), 500); */
 /* setInterval(() =>console.log(generatEqual(3)), 500); */
 
 // Write TypeScript code!
