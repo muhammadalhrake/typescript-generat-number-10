@@ -16,17 +16,20 @@ function shuffle(a) {
   let j, x, i;
   if (array.length == 3) {
     if (array[1] == array[2]) {
-      if(array[1]>0){
-        array[1]-=1;
-        array[2]+=1;
-      }else if(array[1]==0){
-        array[0]-=1;
-        array[2]+=1;
+      if (array[1] > 0) {
+        array[1] -= 1;
+        array[2] += 1;
+        return array;
+      } else if (array[1] == 0) {
+        array[0] -= 1;
+        array[2] += 1;
+        return array;
       }
-    }else{
+    } else {
       x = array[1];
       array[1] = array[2];
       array[2] = x;
+      return array;
     }
   } else {
     for (i = array.length - 1; i > 1; i--) {
