@@ -54,6 +54,7 @@ function generatEqual(digitsNum: number) {
   //console.log(shuffle(arrayOfNum));
   return arrayOfNum;
 }
+
 /* setInterval(() =>testOfGeneratEqual(generatEqual(between(3,9))), 500); */
 /* setInterval(() =>console.log(generatEqual(3)), 500); */
 
