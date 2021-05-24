@@ -8,7 +8,8 @@ function between(min: number, max: number) {
   return random.int(min, max);
 }
 function shuffle1(array) {
-  var currentIndex = array.length,
+  let array1 = [...array]
+  var currentIndex = array1.length,
     temporaryValue,
     randomIndex;
 
@@ -19,12 +20,12 @@ function shuffle1(array) {
     currentIndex -= 1;
 
     // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+    temporaryValue = array1[currentIndex];
+    array1[currentIndex] = array1[randomIndex];
+    array1[randomIndex] = temporaryValue;
   }
 
-  return array;
+  return array1;
 }
 
 //test of generatEqual function
@@ -68,9 +69,9 @@ function generatEqual(digitsNum: number) {
       }
     }
   }
-  
+  console.log(shuffle1(arrayOfNum));
   //handling the array
-  handel(arrayOfNum, digitsNum);
+  //handel(arrayOfNum, digitsNum);
   return arrayOfNum;
 }
 /* setInterval(() =>testOfGeneratEqual(generatEqual(between(2,9))), 700); */
