@@ -14,17 +14,26 @@ function between(min: number, max: number) {
 function shuffle(a) {
   let array = [...a];
   let j, x, i;
-  for (i = array.length - 1; i > 1; i--) {
-    j = between(1, i);
-    x = array[i];
-    array[i] = array[j];
-    array[j] = x;
-  }
-  if (compareArrays(array, a)) {
-    console.log(array, a )
-    return shuffle(array);
+  if (array.length == 3) {
+    if (array[1] == array[2]) {
+    }
   } else {
-    return array;
+    for (i = array.length - 1; i > 1; i--) {
+      if (i == 2) {
+        j = 1;
+      } else if (i > 2) {
+        j = between(1, i - 1);
+      }
+      x = array[i];
+      array[i] = array[j];
+      array[j] = x;
+    }
+    if (compareArrays(array, a)) {
+      console.log(array, a);
+      return shuffle(array);
+    } else {
+      return array;
+    }
   }
 }
 function compareArrays(a: any[], b: any[]) {
