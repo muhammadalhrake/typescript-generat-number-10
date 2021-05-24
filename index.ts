@@ -15,12 +15,16 @@ function shuffle(a) {
   let array = [...a];
   let j, x, i;
   for (i = array.length - 1; i > 1; i--) {
-    j = Math.floor(Math.random() * (i + 1));
+    j = between(1, i);
     x = array[i];
     array[i] = array[j];
     array[j] = x;
   }
-  return array;
+  if (array == a) {
+    return shuffle(array);
+  } else {
+    return array;
+  }
 }
 function shuffle1(array) {
   let array1 = [...array];
@@ -29,9 +33,9 @@ function shuffle1(array) {
     randomIndex;
 
   // While there remain elements to shuffle...
-  while (1 !== currentIndex) {
+  while (1 != currentIndex) {
     // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
+    randomIndex = between(1, currentIndex);
     currentIndex -= 1;
 
     // And swap it with the current element.
@@ -84,12 +88,12 @@ function generatEqual(digitsNum: number) {
       }
     }
   }
-  console.log(shuffle1(arrayOfNum));
+  console.log(shuffle(arrayOfNum));
   //handling the array
   //handel(arrayOfNum, digitsNum);
   return arrayOfNum;
 }
-/* setInterval(() =>testOfGeneratEqual(generatEqual(between(2,9))), 500); */
+/* setInterval(() =>testOfGeneratEqual(generatEqual(between(3,3))), 500); */
 /* setInterval(() =>console.log(generatEqual(3)), 500); */
 
 // Write TypeScript code!
