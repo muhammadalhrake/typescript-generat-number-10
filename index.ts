@@ -115,9 +115,10 @@ function generatEqual(digitsNum: number) {
       }
     }
   }
-  console.log(shuffle(arrayOfNum));
   //handling the array
-  //handel(arrayOfNum, digitsNum);
+  handel(arrayOfNum, digitsNum);
+  //Shuffel array
+  console.log(shuffle(arrayOfNum));
   return arrayOfNum;
 }
 /* setInterval(() =>testOfGeneratEqual(generatEqual(between(3,9))), 500); */
