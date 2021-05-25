@@ -3,6 +3,7 @@ import './style.css';
 //imports
 import random from 'random';
 import { handel } from './handel';
+import {ansArray} from './generatAnswer'
 //helper function
 function between(min: number, max: number) {
   return random.int(min, max);
@@ -56,7 +57,7 @@ function generatEqual(digitsNum: number) {
 }
 
 /* setInterval(() =>testOfGeneratEqual(generatEqual(between(3,9))), 500); */
-/* setInterval(() =>console.log(generatEqual(3)), 500); */
+/* setInterval(() => console.log(ansArray(111,+generatEqual(5).join(''))), 500); */
 
 // Write TypeScript code!
 

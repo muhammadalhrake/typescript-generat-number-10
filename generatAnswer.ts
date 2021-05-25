@@ -55,7 +55,7 @@ function ansGenerat(correctAns: number) {
   return shuffle(arr);
 }
 // main function
-function ansArray(ones: number, num: number) {
+export function ansArray(ones: number, num: number) {
   let first = ones * num;
   let digits = first.toString().length;
   let second = +ansGenerat(first).join('');
@@ -67,5 +67,13 @@ function ansArray(ones: number, num: number) {
     +new Array(digits).fill(1).join(''),
     +new Array(digits).fill(9).join('')
   );
-  return [first, second, third, fourth];
+  let answer = [first, second, third, fourth];
+  for (let i = 3; i >= 0; i++) {
+    let j, x, i;
+    j = between(0, i);
+    x = answer[i];
+    answer[i] = answer[j];
+    answer[j] = x;
+  }
+  return answer;
 }
