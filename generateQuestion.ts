@@ -6,7 +6,8 @@ export function generateQuestion(
   digitsNum: number,
   stateDigits: string
 ) {
-  let generate : generateQuestionR
+  let onsNumber = +new Array(numberOfOns).fill(1).join('');
+  let generate: generateQuestionR;
   let multNum: number;
   let answers: any[];
   if (stateDigits == '=10') {
@@ -16,8 +17,8 @@ export function generateQuestion(
   } else if (stateDigits == '<10') {
     //multNum= +generatLessThan(digitsNum).join('')
   }
-  answers = ansArray(numberOfOns, multNum);
-  generate.answers=answers;
-  generate.multiplyNum=multNum
-  return generate
+  answers = ansArray(onsNumber, multNum);
+  generate.answers = answers;
+  generate.multiplyNum = multNum;
+  return generate;
 }
