@@ -23,7 +23,7 @@ function testOfGeneratEqual(array: Array<number>) {
   console.log(testOn);
 }
 //main function
-function generatEqual(digitsNum: number) {
+export function generatEqual(digitsNum: number) {
   let range = 10,
     first = between(1, 9);
   let arrayOfNum = new Array();
