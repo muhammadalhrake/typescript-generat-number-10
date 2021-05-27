@@ -1,0 +1,1 @@
+import {ansArray} from './generatAnswer';
