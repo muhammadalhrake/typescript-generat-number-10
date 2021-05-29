@@ -5,7 +5,7 @@ import './style.css';
 import { generateQuestion } from './generateQuestion';
 
 
-/* setInterval(()=>generateQuestion(5,5,"=10"),500); */
+/* setInterval(()=>console.log(generateQuestion(5,5,"=10")),500); */
 
 /* setInterval(() =>testOfGeneratEqual(generatEqual(between(3,9))), 500); */
 /* setInterval(() => console.log(ansArray(111,+generatEqual(5).join(''))), 500); */

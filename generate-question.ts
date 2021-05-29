@@ -1,4 +1,4 @@
 export interface generateQuestionR {
-  answers: string[];
+  answers: number[];
   multiplyNum: number;
 }
