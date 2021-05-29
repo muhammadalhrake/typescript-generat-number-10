@@ -11,14 +11,15 @@ import{generateQuestionR}from './generate-question'
 /* setInterval(() => console.log(ansArray(111,+generatEqual(5).join(''))), 500); */
 
 function multQuestion(cont:number,ons:number,digits:number,stat:string){
-  let questions=new Array;
-  let a={answers:[],multiplyNum:0}
+  let questions=new Array<generateQuestionR>();
   for(let i =0;i<cont;i++){
     questions.push(generateQuestion(ons,digits,stat))
   }
   return questions
 }
 // Write TypeScript code!
+
+
 console.log(multQuestion(5,3,4,"=10"));
 const appDiv: HTMLElement = document.getElementById('app');
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
