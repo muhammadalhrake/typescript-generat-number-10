@@ -68,5 +68,12 @@ export function ansArray(ones: number, num: number) {
     +new Array(digits).fill(9).join('')
   );
   let answer = [first, second, third, fourth];
+  for (let i = 3; i >= 0; i--) {
+    let j, x;
+    let rand = between(0, i);
+    x = answer[rand];
+    answer[rand] = answer[i];
+    answer[i] = x;
+  }
   return answer;
 }
